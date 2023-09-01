@@ -1,0 +1,30 @@
+{
+    "version": "0.0.0",
+    "configurations": [
+        {
+            "name": "Python: Arquivo Atual",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "cwd": "${fileDirname}",
+            "env": {
+                "PYTHONPATH": "${workspaceRoot}:src"
+            }
+        },
+        {
+            "name": "Python: FastAPI",
+            "type": "python",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "main:app", "--port", "8000"
+            ],
+            "jinja": true,
+            "cwd": "${workspaceRoot}/src",
+            "env": {
+                "PYTHONPATH": "${workspaceRoot}:src"
+            }
+        },
+    ]
+}

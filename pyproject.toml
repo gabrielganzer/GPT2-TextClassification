@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "gpt2-textclassification"
+version = "0.0.0"
+description = "GPT2 Text Classification"
+authors = ["Gabriel Ganzer <gabriel.ganzer@icloud.com>"]
+license = "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007"
+readme = "README.md"
+packages = [{include = "gpt2_textclassification"}]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.12"
+torch = ">=2.0.0, !=2.0.1"
+transformers = "^4.31.0"
+emoji = "^2.8.0"
+pandas = "^2.0.3"
+scikit-learn = "^1.3.0"
+loguru = "^0.7.0"
+fastapi = "^0.103.0"
+uvicorn = "^0.23.2"
+beautifulsoup4 = "^4.12.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 79
+include = '\.pyi?$'
